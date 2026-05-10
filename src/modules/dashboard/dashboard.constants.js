@@ -1,0 +1,58 @@
+'use strict';
+
+const DASHBOARD_MESSAGES = Object.freeze({
+  DASHBOARD_FETCHED: 'Dashboard fetched successfully',
+  SUMMARY_FETCHED: 'Dashboard summary fetched successfully',
+  TOP_CUSTOMERS_FETCHED: 'Top customers fetched successfully',
+  LOW_STOCK_FETCHED: 'Low stock products fetched successfully',
+  RECENT_ACTIVITY_FETCHED: 'Recent activity fetched successfully',
+  SALES_TREND_FETCHED: 'Sales trend fetched successfully',
+  BEST_SELLING_PRODUCTS_FETCHED: 'Best-selling products fetched successfully',
+  MONTHLY_SALES_FETCHED: 'Monthly sales fetched successfully',
+});
+
+const DASHBOARD_PERMISSIONS = Object.freeze({
+  READ: 'dashboard:read',
+});
+
+const DEFAULT_SUMMARY_DAYS = 30;
+const MAX_SUMMARY_DAYS = 365;
+
+const DEFAULT_TOP_CUSTOMERS_LIMIT = 5;
+const MAX_TOP_CUSTOMERS_LIMIT = 25;
+
+const DEFAULT_LOW_STOCK_LIMIT = 10;
+const MAX_LOW_STOCK_LIMIT = 50;
+
+const DEFAULT_ACTIVITY_LIMIT = 10;
+const MAX_ACTIVITY_LIMIT = 50;
+
+const DEFAULT_TREND_DAYS = 30;
+const MAX_TREND_DAYS = 180;
+
+const DEFAULT_BEST_SELLING_LIMIT = 5;
+const MAX_BEST_SELLING_LIMIT = 25;
+const DEFAULT_BEST_SELLING_DAYS = 90;
+
+const DEFAULT_MONTHLY_SALES_MONTHS = 7;
+const MAX_MONTHLY_SALES_MONTHS = 24;
+
+module.exports = {
+  DASHBOARD_MESSAGES,
+  DASHBOARD_PERMISSIONS,
+  DEFAULT_SUMMARY_DAYS,
+  MAX_SUMMARY_DAYS,
+  DEFAULT_TOP_CUSTOMERS_LIMIT,
+  MAX_TOP_CUSTOMERS_LIMIT,
+  DEFAULT_LOW_STOCK_LIMIT,
+  MAX_LOW_STOCK_LIMIT,
+  DEFAULT_ACTIVITY_LIMIT,
+  MAX_ACTIVITY_LIMIT,
+  DEFAULT_TREND_DAYS,
+  MAX_TREND_DAYS,
+  DEFAULT_BEST_SELLING_LIMIT,
+  MAX_BEST_SELLING_LIMIT,
+  DEFAULT_BEST_SELLING_DAYS,
+  DEFAULT_MONTHLY_SALES_MONTHS,
+  MAX_MONTHLY_SALES_MONTHS,
+};
