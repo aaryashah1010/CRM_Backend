@@ -48,6 +48,7 @@ const createProductSchema = Joi.object({
   reorderLevel: quantity.default(0),
   reorderQuantity: quantity.default(0),
   isActive: Joi.boolean().default(true),
+  openingStock: Joi.number().precision(3).min(0).default(0),
 });
 
 const updateProductSchema = Joi.object(productPayload).min(1);

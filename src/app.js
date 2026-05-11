@@ -62,8 +62,8 @@ app.use('/api/v1/receipts',       require('./modules/receipts/receipt.routes'));
 app.use('/api/v1/payments',       require('./modules/payments/payment.routes'));
 app.use('/api/v1/inventory',      require('./modules/inventory/inventory.routes'));
 app.use('/api/v1/dashboard',      require('./modules/dashboard/dashboard.routes'));
-// app.use('/api/v1/reports',        require('./modules/reports/report.routes'));
-// app.use('/api/v1/settings',       require('./modules/settings/settings.routes'));
+app.use('/api/v1/reports',        require('./modules/reports/report.routes'));
+app.use('/api/v1/settings',       require('./modules/settings/settings.routes'));
 
 // 404
 app.use((_req, _res, next) => next(new NotFoundError('Route not found')));

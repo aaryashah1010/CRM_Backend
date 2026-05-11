@@ -147,6 +147,19 @@ const createProduct = async (payload, actorUserId) => {
   await assertUniqueSku(product.sku);
   await assertReferences(product);
   const productId = await productRepository.createProduct({ ...product, actorUserId });
+
+  const openingStock = Number(payload.openingStock || 0);
+  if (openingStock > 0) {
+    await productRepository.adjustStock({
+      productId,
+      direction: 'in',
+      quantity: openingStock,
+      movementDate: normalizeDateOnly(new Date()),
+      remarks: 'Opening stock balance',
+      actorUserId,
+    });
+  }
+
   return getProduct(productId);
 };
 
